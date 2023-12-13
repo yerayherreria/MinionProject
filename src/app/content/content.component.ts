@@ -71,4 +71,8 @@ export class ContentComponent {
   aggregate(name:String){
     this.favorites.push(name);
   }
+
+  eliminate(name:String){
+    this.favorites.splice(this.favorites.indexOf(name),1)
+  }
 }
