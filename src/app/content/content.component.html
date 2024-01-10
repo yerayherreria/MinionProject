@@ -26,6 +26,8 @@
             <ng-template #noGood>
                 <img src="../../assets/img/de los malos.PNG" class="card-img-top" alt="...">
             </ng-template>
+            <a [routerLink]="['/infoMinion',minion.name]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info</button></a>
+            <a [routerLink]="['/minions/infoMinionChildren',minion.name]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info Child</button></a>
         </div>
 
     

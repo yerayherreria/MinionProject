@@ -72,4 +72,8 @@ export class MinionService {
   getFilterMinions(term:string):Minion[]{
     return this.minions.filter(minion => minion.name.startsWith(term))
   }
+
+  getFilterName(term:string):Minion[]{
+    return this.minions.filter(minion => minion.name==term);
+  }
 }
