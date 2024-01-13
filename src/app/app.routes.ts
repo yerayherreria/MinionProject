@@ -11,9 +11,9 @@ export const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'minions',component:MinionsComponent,
         children:[
-            {path:'infoMinionChildren/:name',component:InfoMinionChildrenComponent},
+            {path:'infoMinionChildren/:id',component:InfoMinionChildrenComponent},
         ]
     },
-    {path:'infoMinion/:name',component:InfoMinionComponent},
+    {path:'infoMinion/:id',component:InfoMinionComponent},
     {path:'**',component:NotfoundComponent}
 ];

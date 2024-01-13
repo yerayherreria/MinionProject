@@ -1,6 +1,6 @@
 <h1>List for minions</h1>
 <div class="container">
-    <div *ngFor="let minion of minions">
+    <div *ngFor="let minion of minions2">
         <div class="card" style="width: 10rem;">
             <img src={{minion.img}} class="card-img-top" alt="...">
             <div class="card-body">
@@ -26,14 +26,14 @@
             <ng-template #noGood>
                 <img src="../../assets/img/de los malos.PNG" class="card-img-top" alt="...">
             </ng-template>
-            <a [routerLink]="['/infoMinion',minion.name]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info</button></a>
-            <a [routerLink]="['/minions/infoMinionChildren',minion.name]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info Child</button></a>
+            <a [routerLink]="['/infoMinion',minion.id]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info</button></a>
+            <a [routerLink]="['/minions/infoMinionChildren',minion.id]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info Child</button></a>
         </div>
 
     
     </div>
   </div>
-  <h2>api</h2>
+  <!-- <h2>api</h2>
   <div *ngFor="let minion of minions2">
     <div class="card" style="width: 10rem;">
         <img src={{minion.img}} class="card-img-top" alt="...">
@@ -65,4 +65,4 @@
     </div>
 
 
-</div>
+</div> -->

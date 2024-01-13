@@ -14,7 +14,16 @@ export class MinionsService {
     return this.httpClient.get<Minion[]>(this.url);
   }
 
+  getMinionByName(name:string):Observable<Minion[]>{
+    return this.httpClient.get<Minion[]>(`${this.url}?name=${name}`);
+  }
+
+  getMinionById(id:string):Observable<Minion[]>{
+    return this.httpClient.get<Minion[]>(`${this.url}?id=${id}`);
+  }
+  
   addMinion(minion: Omit<PositionCallback,"id">){
     return this.httpClient.post<Minion>(this.url,minion);
   }
+
 }
