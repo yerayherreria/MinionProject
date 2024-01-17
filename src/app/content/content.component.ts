@@ -19,14 +19,14 @@ export class ContentComponent implements OnInit{
   constructor(private minionsService: MinionsService){}
 
   ngOnInit(): void {
-    // this.minionsService.getMinions()
-    // .subscribe({
-    //   next: (minions2) => this.minions2 = minions2
-    // })
-    this.minions$ = this.minionsService.getMinions();
-
     this.minionsService.getMinions()
-    .subscribe((next)=>console.log(next), (error)=>console.log(error))
+    .subscribe({
+      next: (minions2) => this.minions2 = minions2
+    })
+    // this.minions$ = this.minionsService.getMinions();
+
+    // this.minionsService.getMinions()
+    // .subscribe((next)=>console.log(next), (error)=>console.log(error))
   }
 
   deleteMinion(id:String){

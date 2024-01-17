@@ -1,6 +1,5 @@
 <h1>List for minions</h1>
 <div class="container">
-  @if (minions$|async; as minions2 ) {
     <div *ngFor="let minion of minions2">
         <div class="card" style="width: 10rem;">
             <img src={{minion.img}} class="card-img-top" alt="...">
@@ -27,14 +26,14 @@
             <ng-template #noGood>
                 <img src="../../assets/img/de los malos.PNG" class="card-img-top" alt="...">
             </ng-template> -->
-            <a [routerLink]="['/infoMinion',minion.id]" routerLinkActive="active" align="center"><button type="button" class="btn btn-primary">View info</button></a>
+            <a [routerLink]="['/infoMinion',minion.id]" routerLinkActive="active" align="center"><button type="button" class="btn btn-success">View info</button></a>
             <!-- <a [routerLink]="['/minions/infoMinionChildren',minion.id]" routerLinkActive="active"><button type="button" class="btn btn-primary">View info Child</button></a> -->
             <a [routerLink]="['/editMinion',minion.id]" routerLinkActive="active" align="center"><button type="button" class="btn btn-primary">Edit</button></a>
-            <button type="button" class="btn btn-primary" (click)="deleteMinion(minion.id)" align="center">Delete</button>
+            <button type="button" class="btn btn-danger" (click)="deleteMinion(minion.id)" align="center">Delete</button>
         </div>
 
     
     </div>
 
-  }
+  
   </div>
